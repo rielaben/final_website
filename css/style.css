@@ -76,7 +76,7 @@ a:hover
 
 #nav .current_page_item a {
   text-decoration: underline;
-  background: #2B8FC4;
+  background: #1F5C5A;
   box-shadow: 1px 1px 1px 1px #ccc;
   /* box-shadow: inset 0px -15px 10px 0px rgb(0 0 0 / 10%); */
   color: #FFFFFF;
@@ -199,7 +199,13 @@ a:hover
 		position: relative;
 	}
 
-	#banner header h2
+	/* #banner header h2
+	{
+		text-transform: uppercase;
+		font-size: 3em;
+		color: #FFF;
+	} */
+  #banner header h1
 	{
 		text-transform: uppercase;
 		font-size: 3em;
