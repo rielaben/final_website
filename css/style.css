@@ -12,8 +12,8 @@ body
 	margin: 0;
 	padding: 0em;
 	line-height: 2em;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 10pt;
+	font-family: Georgia, 'Open Sans', sans-serif;
+	font-size: 14pt;
 	color: #686868;
 }
 
@@ -211,12 +211,12 @@ a:hover
 		font-size: 3em;
 		color: #FFF;
     line-height: 110%;
-    
+
 	}
 
 	#banner header .byline
 	{
-		padding: 0em 5em;
+		/* padding: 0em 5em; */
 		font-size: 1.50em;
 	}
 	
