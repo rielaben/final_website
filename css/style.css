@@ -15,13 +15,14 @@ body
 	font-family: Georgia, 'Open Sans', sans-serif;
 	font-size: 14pt;
 	color: #CDCDCD;
+	background: #1E2235;
 
 }
 
 body, #skel-panels-pageWrapper
 {
 	/* background: #101214 url(images/main-bg.png) repeat; */
-  background: #101214;
+  
 }
 
 h1, h2, h3 {
@@ -159,56 +160,11 @@ a:hover
   }
 
 
-  /* Jump to Main Content */
-
-	  /* a.skip{
-		background: white;
-		left: 0;
-		padding: 6px;
-		position: absolute;
-		top: -40px;
-		text-transform: capitalize;
-		z-index: 1;
-	  }
-	  
-	  a.skip:focus{
-		top:20px;
-		color: black;
-		text-decoration-style: solid;
-	  } */
-	  .jump a{
-		top: -50px;
-		background: red;
-		left: 0;
-		padding: 7px;
-		-webkit-transition: top 1s ease-out;
-		transition: top 1s ease-out;
-		z-index: 1;
-	  
-		/* skip a element position: FAILED */
-		/* not relative? */
-		/* position: absolute; */
-		
-		/*Your code here*/
-	  }
-	  /*Req 3b*/
-	  /*Write selector/rule property to position the skip class element*/
-	  
-	  /* what does it mean to say skip is in focus? Should top and bottom be switched? */
-	  /* error: check at OH */
-	  .skip a:focus {
-		top: 10px;
-		/* bottom: 10px; */
-	  }
-	  
-	  *:focus{
-		border: 2px solid black;
-	  }
-
   .grid {
     /*Grid Specific*/
 
       /*General Styline*/
+	  display: grid;
       background-color: #0c0e0f;
       padding: 3px;
       width:95%;
@@ -258,8 +214,7 @@ a:hover
 		text-transform: uppercase;
 		font-size: 3em;
 		color: #FFF;
-    line-height: 110%;
-
+    	line-height: 110%;
 	}
 
 	#banner header .byline
@@ -345,66 +300,88 @@ a:hover
 	form {
 		/* border: 3px solid #f1f1f1; */
 		/* vertical-align: middle; */
-	  }
+	}
 	  
-	  legend{ 
-		font-size: 200%;
-		font-style:italic;
-		text-transform: uppercase;
-		text-align: center;
-		margin-bottom: 5%;
-	  }
-	  
-	  label{
-		display: inline-block;
-		/* margin-right:10px; */
-		width:15%;
-		/* vertical-align: middle; */
-	  }
-	  input {
-		width: 60%;
-		padding: 12px 20px;
-		margin: 3%;
-		/* margin: 8px 0; */
-		display: inline-block;
-		border: 1px solid #ccc;
-		box-sizing: border-box;
-	  }
-	  
-	  textarea{
-		/* display: flex;
-  		justify-content: center;
-  		align-items: center; */
-		display: inline-block;
-		width: 60%;
-		padding: 12px 20px;
-		margin: 3%;
-		
-		border: 1px solid #ccc;
-		box-sizing: border-box;
-		vertical-align: middle;
+	legend{ 
+	font-size: 200%;
+	font-style:italic;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 5%;
+	}
+	
+	label{
+	display: inline-block;
+	margin: 3%;
+	/* margin-right:10px; */
+	width:15%;
+	/* vertical-align: middle; */
+	}
+	input {
+	width: 60%;
+	padding: 12px 20px;
+	margin: 3%;
+	/* margin: 8px 0; */
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	}
+	
+	textarea{
+	/* display: flex;
+	justify-content: center;
+	align-items: center; */
+	display: inline-block;
+	width: 60%;
+	padding: 12px 20px;
+	margin: 3%;
+	
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	vertical-align: middle;
 
-		/* cursor: text; */
-		/* margin: 8px 0; */
-		
-	  }
-	  
-	  input[type=checkbox]{
-	  }
-	  
-	  input[type=submit] {
-		background-color: #1E2235;
-		color: white;
-		cursor: pointer;
-		width: 50%;
-		font-size: 125%;
-	  }
-	  
-	  input[type=submit]:hover {
-		opacity: 0.8;
-	  }
+	/* cursor: text; */
+	/* margin: 8px 0; */
+	
+	}
+	
+	input[type=checkbox]{
+	}
+	
+	input[type=submit] {
+	background-color: #1E2235;
+	color: white;
+	cursor: pointer;
+	width: 50%;
+	font-size: 125%;
+	}
+	
+	input[type=submit]:hover {
+	opacity: 0.8;
+	}
 
 
+	  /* Jump to Main Content */
+
+  .skip a{
+	left: 0;
+	padding: 6px;
+	position: absolute;
+	top: -60px;
+	-webkit-transition: top 1s ease-out;
+	transition: top 1s ease-out;
+	z-index: 1;
+  }
+  
+  .skip a:focus{
+	top:175px;
+	color: black;
+	/* text-decoration-style:solid; */
+  }
+  
+  *:focus{
+	border: 2px solid black;
+  }
 
 
 /* Copyright */
@@ -432,21 +409,63 @@ a:hover
 		text-decoration: none;
 	}
 
-  @media screen and (min-width: 850px){
+	/* tablet */
+	@media screen and (min-width: 700px){
+		.grid {
+			grid-template-columns: auto auto;
+		}
 
-    header{
-      /* display: flex;  */
-      justify-content: space-between;
-      /* flex-wrap: wrap; */
-      flex-direction: row;
-    }
-  
-    .nav_links{
-      /*Your code here again.*/  
-      /* display: flex; */
-      flex-direction: row;
-    }
-  }
+		#nav a{
+			padding: 1em 1em;
+			/* padding: 2%; */
+		}
+		header{
+			/* display: flex;  */
+			justify-content: space-between;
+			/* flex-wrap: wrap; */
+			flex-direction: row;
+			/* padding: 20px; */
+		}
+	
+		.nav_links{
+			/*Your code here again.*/  
+			display: flex;
+			justify-content:center;
+			flex-direction: row;
+		}
+		.skip a:focus{
+			top:10px;
+		}
+	
+
+	/* desktop */
+	@media screen and (min-width: 1000px){
+	
+	.grid {
+		grid-template-columns: auto auto auto;
+	}
+
+	#nav a{
+		padding: 1em 1em;
+		/* padding: 2%; */
+	}
+	header{
+		/* display: flex;  */
+		justify-content: space-between;
+		/* flex-wrap: wrap; */
+		flex-direction: row;
+		/* padding: 20px; */
+	}
+
+	.nav_links{
+		/*Your code here again.*/  
+		display: flex;
+		justify-content:flex-end;
+		flex-direction: row;
+	}
+	.skip a:focus{
+		top:10px;
+	}
 
 
   /* issues
@@ -454,5 +473,4 @@ a:hover
   take starter code from hw6 or code from hw5
   make footer inside of body
   look at form inline block and width values for inputs
-  1. skip to main content tab not working
-  2. How to make focus things highlight like in hw6 */
+ */
