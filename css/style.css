@@ -43,6 +43,10 @@ h2
 p, ol, ul
 {
 	margin-top: 1em;
+	margin-left: 5%;
+	margin-right: 5%;
+
+	/* width: auto; */
 }
 
 /* p
@@ -150,8 +154,8 @@ a:hover
 	}
 
 	#logo img{
-		width: 60px;
-		height: 50px;
+		width: 80px;
+		height: 70px;
 	}
 
   * {
@@ -373,7 +377,7 @@ a:hover
   
   .skip a:focus{
 	top:175px;
-	color: black;
+	color: white;
 	/* text-decoration-style:solid; */
   }
   
@@ -407,6 +411,7 @@ a:hover
 		text-decoration: none;
 	}
 
+
 	/* tablet */
 	@media screen and (min-width: 700px){
 		.grid {
@@ -434,6 +439,15 @@ a:hover
 		.skip a:focus{
 			top:10px;
 		}
+
+		#logo img{
+			width: 90px;
+			height: 80px;
+		}
+
+		.row-double {
+			columns: auto 2;
+		}
 	}
 	
 
@@ -445,6 +459,15 @@ a:hover
 	}
 	.nav_links{
 		justify-content:flex-end;
+	}
+
+	#logo img{
+		width: 100px;
+		height: 90px;
+	}
+
+	.row-double {
+		columns: auto 3;
 	}
 	
 	}
