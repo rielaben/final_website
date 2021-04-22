@@ -423,14 +423,15 @@ a:hover
 		text-decoration: none;
 	}
 
-	.flip-card, .flip-card:focus {
+	
+	.flip-card {
 		background-color: transparent;
 		/* width: 300px; */
 		/* height: 300px; */
 		perspective: 1000px;
 	  }
 	  
-	  .flip-card-inner, .flip-card-inner:focus {
+	  .flip-card-inner {
 		position: relative;
 		width: 100%;
 		height: 100%;
@@ -440,11 +441,11 @@ a:hover
 		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 	  }
 	  
-	  .flip-card:hover .flip-card-inner, .flip-card:focus .flip-card-inner{
+	  .flip-card:focus .flip-card-inner, .flip-card:hover .flip-card-inner{
 		transform: rotateY(180deg);
 	  }
 	  
-	  .flip-card-front, .flip-card-back, .flip-card-front:focus, .flip-card-back:focus {
+	  .flip-card-front, .flip-card-back {
 		position: absolute;
 		width: 100%;
 		height: 100%;
@@ -452,12 +453,12 @@ a:hover
 		backface-visibility: hidden;
 	  }
 	  
-	  .flip-card-front, .flip-card-front:focus {
+	  .flip-card-front {
 		background-color: #bbb;
 		color: black;
 	  }
 	  
-	  .flip-card-back, .flip-card-back:focus {
+	  .flip-card-back {
 		background-color: #2980b9;
 		color: white;
 		transform: rotateY(180deg);
@@ -465,7 +466,7 @@ a:hover
 
 
 	/* tablet */
-	@media screen and (min-width: 700px){
+	@media screen and (min-width: 641px){
 		.grid {
 			grid-template-columns: auto auto;
 		}
@@ -500,7 +501,7 @@ a:hover
 	
 
 	/* desktop */
-	@media screen and (min-width: 1000px){
+	@media screen and (min-width: 1008px){
 	
 	.grid {
 		grid-template-columns: auto auto auto;
